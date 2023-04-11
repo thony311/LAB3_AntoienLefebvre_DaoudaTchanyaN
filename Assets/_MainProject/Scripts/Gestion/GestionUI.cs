@@ -33,8 +33,8 @@ public class GestionUI : MonoBehaviour
         try
         {
             pointageFinal.GetComponent<TMPro.TextMeshProUGUI>().text = "Pointage Final : " + gestionJeu.getPointage().ToString();
-            tempsFinal.GetComponent<TMPro.TextMeshProUGUI>().text = "Vous avez fait " +(gestionJeu.getTempsFinal() - gestionJeu.getPointage()).ToString() + " sec";
-            tempsPointagefinal.GetComponent<TMPro.TextMeshProUGUI>().text = "Votre temps final est donc de " + gestionJeu.getTempsFinal().ToString();
+            tempsFinal.GetComponent<TMPro.TextMeshProUGUI>().text = "Vous avez fait " +(gestionJeu.GetTempsNiv(1) + gestionJeu.GetTempsNiv(2) + gestionJeu.GetTempsNiv(0) - gestionJeu.getTempsPause()).ToString() + " sec";
+            tempsPointagefinal.GetComponent<TMPro.TextMeshProUGUI>().text = "Votre temps final est donc de " + (gestionJeu.GetTempsNiv(1) + gestionJeu.GetTempsNiv(2) + gestionJeu.GetTempsNiv(0) - gestionJeu.getTempsPause() + gestionJeu.getPointage()).ToString();
         }
         catch 
         {

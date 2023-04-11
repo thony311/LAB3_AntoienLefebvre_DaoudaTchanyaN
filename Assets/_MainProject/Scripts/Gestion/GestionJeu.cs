@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GestionJeu : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class GestionJeu : MonoBehaviour
     {
         // Vérifi si il y a un gestion jeu dedans le nouveau niveau, si oui il le detruit pour garder l'ancien aussi non il le garde
         int nbGestionJeu = FindObjectsOfType<GestionJeu>().Length;
-        if (nbGestionJeu > 1)
+        int indexScene = SceneManager.GetActiveScene().buildIndex;
+        if (nbGestionJeu > 1 || indexScene == 0)
         {
             Destroy(gameObject);
         }
