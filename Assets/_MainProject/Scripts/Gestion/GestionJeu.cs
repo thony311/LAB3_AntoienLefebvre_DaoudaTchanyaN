@@ -8,6 +8,7 @@ public class GestionJeu : MonoBehaviour
     private int _pointage;
     private float[] _tempsNiv = new float[3];
     private int[] _pointageNiv = new int[3];
+    private float _tempsFinal;
 
     private void Awake()
     {
@@ -28,14 +29,19 @@ public class GestionJeu : MonoBehaviour
         // Lance les introductions et initialise le pointage a 0
         _pointage = 0;
         Instructions();
-
+        _tempsNiv[0] = 0;
+        _tempsNiv[1] = 0;
+        _tempsNiv[2] = 0;
+        _pointageNiv[0] = 0;
+        _pointageNiv[1] = 0;
+        _pointageNiv[2] = 0;
     }
 
     private static void Instructions()
     {
         // Ecrit les instructions du jeu
         Debug.Log("*** Course à obstacles ***");
-        Debug.Log("Atteinfre la fin du parcours le plus rapidement possible");
+        Debug.Log("Atteindre la fin du parcours le plus rapidement possible");
     }
 
     
@@ -72,5 +78,15 @@ public class GestionJeu : MonoBehaviour
     public float GetTempsNiv(int index) 
     { 
         return _tempsNiv[index];
+    }
+
+    public void setTempsFinal(float tempsFinal)
+    {
+        _tempsFinal = tempsFinal;
+    }
+
+    public float getTempsFinal()
+    {
+        return _tempsFinal;
     }
 }

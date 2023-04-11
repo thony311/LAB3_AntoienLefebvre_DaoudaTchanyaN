@@ -28,7 +28,7 @@ public class ScriptFin : MonoBehaviour
         int indexScene = SceneManager.GetActiveScene().buildIndex;
         // Lorsque que le joueur rentre en collision avec l'objet de fin il met fin au jeu
         if(collision.gameObject.tag == "Player")
-            if (indexScene == 2)
+            if (indexScene == 3)
             {
                 // récupère le pointage
                 gestionJeu.SetPointageNiv(indexScene, gestionJeu.getPointage());
@@ -64,6 +64,8 @@ public class ScriptFin : MonoBehaviour
                 // fin
                 float tempTotal = gestionJeu.GetPointageNiv(2) + gestionJeu.GetTempsNiv(2);
                 float nbErreursTotal = gestionJeu.GetPointageNiv(2);
+
+                gestionJeu.setTempsFinal(tempTotal);
 
                 // retourne les informations de la fin du jeu et bloque les mouvements du joueur
                 Debug.Log("!!!!!!Fin du jeu!!!!!!!");

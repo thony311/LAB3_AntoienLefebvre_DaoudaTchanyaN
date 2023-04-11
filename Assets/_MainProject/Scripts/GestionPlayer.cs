@@ -65,4 +65,9 @@ public class GestionPlayer : MonoBehaviour
         
     }
 
+    public bool getDebutJeu()
+    {
+        return _debutJeu;
+    }
+
 }
