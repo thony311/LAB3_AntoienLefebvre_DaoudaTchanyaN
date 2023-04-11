@@ -35,6 +35,11 @@ public class GestionPlayer : MonoBehaviour
         _finJeu = true;
     }
 
+    public void EnleverFinJeu()
+    {
+        _finJeu = false;
+    }
+
     public float GetTimeStart()
     {
         // Retourne le temps

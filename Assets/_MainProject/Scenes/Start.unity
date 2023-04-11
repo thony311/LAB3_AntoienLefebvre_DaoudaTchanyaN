@@ -5926,6 +5926,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instruction: {fileID: 1686510671}
+  temps: {fileID: 0}
+  pointage: {fileID: 0}
+  menuPause: {fileID: 0}
 --- !u!1 &1585885492
 GameObject:
   m_ObjectHideFlags: 0

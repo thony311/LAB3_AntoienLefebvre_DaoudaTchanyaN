@@ -9,6 +9,7 @@ public class GestionJeu : MonoBehaviour
     private float[] _tempsNiv = new float[3];
     private int[] _pointageNiv = new int[3];
     private float _tempsFinal;
+    private float _tempsPause;
 
     private void Awake()
     {
@@ -35,6 +36,7 @@ public class GestionJeu : MonoBehaviour
         _pointageNiv[0] = 0;
         _pointageNiv[1] = 0;
         _pointageNiv[2] = 0;
+        _tempsPause= 0;
     }
 
     private static void Instructions()
@@ -88,5 +90,15 @@ public class GestionJeu : MonoBehaviour
     public float getTempsFinal()
     {
         return _tempsFinal;
+    }
+
+    public float getTempsPause()
+    {
+        return _tempsPause;
+    }
+
+    public void SetTempsPause(float tempsPause)
+    {
+        _tempsPause += tempsPause;
     }
 }
